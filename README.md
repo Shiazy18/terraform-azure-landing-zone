@@ -24,3 +24,24 @@ Think of it as a production-grade baseline to deploy enterprise apps securely an
 
 ---
 
+## HLD
+
+```css
+
+┌────────────────────────────────────────────┐
+│         Subscription (Landing Zone)        │
+└────────────────────────────────────────────┘
+                  │
+     ┌────────────┴────────────┐
+     ▼                         ▼
+[Hub VNET]                 [Spoke VNET(s)]
+  - Shared resources         - Workloads (e.g., App, DB)
+  - Bastion, VPN             - AKS, VMs, PaaS
+  - Firewall, NAT Gateway    - Segmented by tier/env
+     │                         │
+     ▼                         ▼
+[Log Analytics]         [NSGs / Route Tables]
+[Key Vault]             [Private Endpoints]
+[Azure Monitor]         [Service Endpoints]
+
+```
