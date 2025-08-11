@@ -23,11 +23,3 @@ variable "address_space" {
     type = list(string)
     description = "address space for your vnet" 
 }
-
-variable "source_virtual_network_name" {
-  
-}
-
- variable "destination_virtual_network_name" {
-   
- }
