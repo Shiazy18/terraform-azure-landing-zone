@@ -1,6 +1,6 @@
 variable "need_rt" {
     type = bool
-    description = "Mark it as false if vnet is not needed for your infra, yu already have the vnets created"
+    description = "Mark it as false if route table is not needed for your infra, yu already have the vnets created"
     default = true
 }
 
@@ -17,4 +17,15 @@ variable "location" {
 variable "route_table_name" {
     type = string
     description = "Vnet name"
+}
+
+variable "route_name" {
+  
+}
+variable "address_prefix" {
+  
+}
+
+variable "next_hop_type" {
+  
 }
