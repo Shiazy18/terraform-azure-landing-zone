@@ -1,7 +1,7 @@
 variable "need_vnet" {
     type = bool
     description = "Mark it as false if vnet is not needed for your infra, yu already have the vnets created"
-  
+    default = true
 }
 
 variable "network_resource_group_name"{
