@@ -6,7 +6,7 @@ variable "need_rt" {
 
 variable "network_resource_group_name"{
   type = string
-  description = "The name of your networing resource group where vnets, subnets, nsgs will be deployed"   
+  description = "(Required) The name of the resource group in which to create the route. Changing this forces a new resource to be created."
 }
 
 variable "location" {
@@ -16,16 +16,17 @@ variable "location" {
 
 variable "route_table_name" {
     type = string
-    description = "Vnet name"
+    description = "(Required) The name of the route table within which create the route. Changing this forces a new resource to be created."
 }
 
 variable "route_name" {
-  
+  type = string
+  description = "(Required) The name of the route. Changing this forces a new resource to be created."
 }
 variable "address_prefix" {
-  
+  type = string
 }
 
 variable "next_hop_type" {
-  
+  type = string
 }
