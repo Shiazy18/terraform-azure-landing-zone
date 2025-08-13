@@ -1,6 +1,6 @@
 variable "need_rt" {
     type = bool
-    description = "Mark it as false if route table is not needed for your infra, yu already have the vnets created"
+    description = "Mark it as false if route table is not needed for your infra, yu already have the route table created"
     default = true
 }
 
