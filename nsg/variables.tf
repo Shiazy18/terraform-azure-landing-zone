@@ -1,20 +1,20 @@
 variable "need_nsg" {
     type = bool
-    description = "Mark it as false if route table is not needed for your infra, yu already have the vnets created"
+    description = "Mark it as false if network security group is not needed for your infra, yu already have the nsg created. You won't be able to create subnet with nsg associated to it"
     default = true
 }
 
 variable "location" {
   type = string
-  description = "Location where your modules will be created"
+  description = "(Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created."
 }
 
 variable "network_security_group_name" {
     type = string
-    description = "(Required) The name of the route table within which create the route. Changing this forces a new resource to be created."
+    description = "(Required) Specifies the name of the network security group. Changing this forces a new resource to be created."
 }
 
 variable "network_resource_group_name" {
   type = string
-  description = "(Required) The name of the route. Changing this forces a new resource to be created."
+  description = "(Required) The name of the resource group in which to create the network security group. Changing this forces a new resource to be created."
 }
