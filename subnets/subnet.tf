@@ -1,6 +1,7 @@
 resource "azurerm_subnet" "subnet" {
+  count = var.need_subnet == true ? 1 : 0
   name = var.subnet_name
-  virtual_network_name = data.azurerm_virtual_network.vnet.id
+  virtual_network_name = var.vnet_name
   address_prefixes = [  ]
   resource_group_name = var.network_resource_group_name
   
