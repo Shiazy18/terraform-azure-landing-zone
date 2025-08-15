@@ -14,6 +14,11 @@ variable "location" {
   description = "Location where your modules will be created"
 }
 
+variable "subnet_name" {
+    type = string
+    description = "Subnet name"
+}
+
 variable "vnet_name" {
     type = string
     description = "Vnet name"
