@@ -9,6 +9,10 @@ variable "network_resource_group_name"{
   description = "The name of your networing resource group where vnets, subnets, nsgs will be deployed"   
 }
 
+variable "subnet_address_prefix" {
+  
+}
+
 variable "location" {
   type = string
   description = "Location where your modules will be created"
